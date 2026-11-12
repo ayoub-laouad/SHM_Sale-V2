@@ -788,6 +788,17 @@ img { max-width: 100%; }
 .sayhat-table tr:nth-child(even) { background: #faf6ff; }
 .sayhat-table tr:hover { background: #f5f0ff; }
 
+/* مربع لون السداسية */
+.swatch {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    vertical-align: -4px;
+    margin-inline-end: 8px;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
 /* --- صفحة الأنشطة --- */
 .activity-grid {
     display: grid;
