@@ -1189,6 +1189,138 @@ html[dir="rtl"] .product-ribbon {
     padding: 15px 20px;
 }
 
+/* --- الهيكل التنظيمي الحقيقي للفرع --- */
+.org-box h3 i, .role-head i, .unit-head i, .group-head i { margin-inline-end: 6px; }
+
+.org-box.lead {
+    border-color: #1f8a4c;
+    background: #1f8a4c;
+}
+.org-box.lead h3, .org-box.lead p { color: var(--color-white); }
+
+.org-box.deputy {
+    border-color: #ef7d1a;
+    background: #ef7d1a;
+}
+.org-box.deputy h3, .org-box.deputy p { color: var(--color-white); }
+
+.org-box.small { min-width: 220px; }
+.org-box.lead p, .org-box.deputy p, .org-box.small p { font-size: 1.05rem; font-weight: 700; }
+
+.org-roles {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+    width: 100%;
+}
+
+.role-card, .unit-card {
+    background: var(--color-white);
+    border: 2px solid var(--color-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.role-head {
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 10px 8px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5;
+}
+
+.role-name, .unit-name {
+    padding: 10px 8px;
+    font-weight: 700;
+    color: var(--color-text);
+    background: #f5f0ff;
+}
+
+.org-groups {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    gap: 24px;
+    width: 100%;
+}
+
+.org-group {
+    border-radius: 15px;
+    padding: 16px;
+    background: var(--color-white);
+    box-shadow: var(--shadow);
+    border-top: 5px solid;
+}
+
+.org-group.ayayda { border-color: #1f8a4c; }
+.org-group.bitana { border-color: #ef7d1a; }
+
+.group-head {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.org-group.ayayda .group-head { color: #1f8a4c; }
+.org-group.bitana .group-head { color: #ef7d1a; }
+
+.group-units {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+}
+
+.unit-head {
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 8px;
+}
+
+.org-group.ayayda .unit-card { border-color: #1f8a4c; }
+.org-group.ayayda .unit-head { background: #1f8a4c; }
+.org-group.ayayda .unit-name { background: #e9f6ee; }
+.org-group.bitana .unit-card { border-color: #ef7d1a; }
+.org-group.bitana .unit-head { background: #ef7d1a; }
+.org-group.bitana .unit-name { background: #fdf0e4; }
+
+.unit-stage {
+    font-size: 0.8rem;
+    color: var(--color-light-text);
+    padding-top: 6px;
+}
+
+.org-motto {
+    text-align: center;
+    margin-top: 40px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--color-primary);
+}
+
+@media (max-width: 1100px) {
+    .org-roles { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .org-roles { grid-template-columns: repeat(2, 1fr); }
+    .org-groups { grid-template-columns: 1fr; }
+    .group-units { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* --- بطاقات القيم / الرسالة --- */
 .values-grid {
     display: grid;
